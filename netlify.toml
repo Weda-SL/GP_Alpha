@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback so client-side routes (e.g. /orders, /marketplace) work on refresh.
+# (You already have public/_redirects doing the same; this is a belt-and-braces backup.)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
